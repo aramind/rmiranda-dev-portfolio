@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <Stack
       sx={{
-        border: "1px solid red",
+        // border: "1px solid red",
         padding: "0 5% 5% 5%",
         justifyContent: "center",
         height: { md: "100%" },

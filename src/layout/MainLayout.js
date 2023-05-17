@@ -2,6 +2,8 @@ import React from "react";
 import Hero from "../components/hero/Hero";
 import { Box, Grid, Stack, Toolbar } from "@mui/material";
 import Right from "../components/Right";
+import HeroImage from "../components/hero-image/HeroImage";
+import Experiences from "../components/experiences/Experiences";
 
 const MainLayout = () => {
   return (
@@ -26,7 +28,7 @@ const MainLayout = () => {
             item
             xs={12}
             md={4}
-            height={`calc(100vh - 80px)`}
+            sx={{ height: { md: `calc(100vh - 80px)` } }}
           >
             <Hero />
           </Grid>
@@ -36,7 +38,8 @@ const MainLayout = () => {
             md={8}
             // backgroundColor="blue"
           >
-            <Right />
+            <HeroImage />
+            <Experiences />
           </Grid>
         </Grid>
       </Box>
