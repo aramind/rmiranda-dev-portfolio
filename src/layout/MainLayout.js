@@ -1,9 +1,8 @@
 import React from "react";
 import Hero from "../components/hero/Hero";
 import { Box, Grid, Stack, Toolbar } from "@mui/material";
-import Right from "../components/Right";
-import HeroImage from "../components/hero-image/HeroImage";
 import Experiences from "../components/experiences/Experiences";
+import HeroImage from "../components/hero-image/HeroImage";
 
 const MainLayout = () => {
   return (

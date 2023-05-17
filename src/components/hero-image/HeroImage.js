@@ -4,10 +4,27 @@ import React from "react";
 const HeroImage = () => {
   return (
     <Box
-      minHeight="100vh"
-      sx={{ backgroundColor: "red" }}
+      className="centered"
+      sx={{
+        backgroundColor: "#1a5559",
+
+        height: { xs: "600px", md: "100vh" },
+        width: { xs: "100%", md: "100%" },
+        scrollSnapAlign: "center",
+      }}
     >
-      HeroImage
+      <Box
+        sx={{
+          // border: "1px solid red",
+          backgroundImage: `url(./assets/images/image-robin-no-bg-reduced.png)`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "fit",
+          height: { xs: "700px", md: "100vh" },
+          width: { xs: "100%", md: "100%" },
+          scrollSnapAlign: "center",
+        }}
+      ></Box>
     </Box>
   );
 };
