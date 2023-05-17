@@ -1,10 +1,12 @@
 import Navbar from "./components/navbar/Navbar";
+import MainLayout from "./layout/MainLayout";
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
-    </div>
+      <MainLayout />
+    </>
   );
 }
 

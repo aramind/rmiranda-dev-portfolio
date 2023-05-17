@@ -48,6 +48,9 @@ img {
   display: block;
 }
 
+button:hover {
+  color: var(--hightlighted-text);
+}
 /* global classes */
 
 .centered {

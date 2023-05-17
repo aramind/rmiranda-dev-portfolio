@@ -15,7 +15,6 @@ const Navbar = () => {
       <Toolbar
         sx={{
           backgroundColor: muiTheme.palette.bgcolor.darkestBlue,
-          // borderBottom: `0.1px solid ${muiTheme.palette.bgcolor.blue}`,
           maxHeight: "80px",
         }}
       >
