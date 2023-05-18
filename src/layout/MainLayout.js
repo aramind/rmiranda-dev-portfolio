@@ -4,6 +4,7 @@ import { Box, Grid, Stack, Toolbar } from "@mui/material";
 import Experiences from "../components/experiences/Experiences";
 import HeroImage from "../components/hero-image/HeroImage";
 import Qualifications from "../components/qualifications/Qualifications";
+import Stacks from "../components/qualifications/Stacks";
 
 const MainLayout = () => {
   return (
@@ -42,7 +43,9 @@ const MainLayout = () => {
             // backgroundColor="blue"
           >
             <HeroImage />
+            <Stacks />
             <Experiences />
+
             <Qualifications />
           </Grid>
         </Grid>

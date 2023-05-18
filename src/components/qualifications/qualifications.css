@@ -1,0 +1,22 @@
+.stacks {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tech {
+  width: 120px;
+  height: 120px;
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tech p {
+  width: 100%;
+  text-align: center;
+}
