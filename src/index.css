@@ -66,3 +66,16 @@ button:hover {
 .section-title {
   font-size: 2rem;
 }
+
+.logo {
+  height: 80px;
+  width: 80px;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}

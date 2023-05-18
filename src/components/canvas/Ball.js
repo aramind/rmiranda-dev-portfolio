@@ -29,7 +29,7 @@ const Ball = (props) => {
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color="#fff8eb"
-          // color="#1a5559"
+          // color="#051923"
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
@@ -92,7 +92,7 @@ const BallCanvas = ({ icon }) => {
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
-          // autoRotate
+          autoRotate
           autoRotateSpeed={autoRotateSpeed}
           maxPolarAngle={Math.PI / 2} // Limit rotation to the top hemisphere
           minPolarAngle={Math.PI / 2} // Limit rotation to the bottom hemisphere

@@ -3,6 +3,7 @@ import React from "react";
 import { AppBar, Link, Stack, Toolbar, Typography } from "@mui/material";
 import muiTheme from "../../muiTheme";
 import NavBarLinks from "./NavbarLinks";
+import BallCanvas from "../canvas/Ball";
 
 const Navbar = () => {
   return (
@@ -33,17 +34,13 @@ const Navbar = () => {
               src="./assets/images/logo/logo-transparent.png"
               alt="robin mon"
             /> */}
-            <Typography
-              fontSize="50px"
-              sx={{
-                color: "#ddd",
-                "&:hover": {
-                  color: muiTheme.palette.myColor.gold,
-                },
-              }}
-            >
-              RM
-            </Typography>
+            <div className="logo">
+              {/* <img
+                src="/assets/images/logo/logo-no-background.svg"
+                alt="rm logo"
+              /> */}
+              <BallCanvas icon="/assets/images/logo/logo-no-background.svg" />
+            </div>
           </Link>
 
           <NavBarLinks />
