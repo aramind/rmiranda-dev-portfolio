@@ -2,7 +2,7 @@ import React from "react";
 import BallCanvas from "../canvas/Ball";
 import "./qualifications.css";
 import { Box } from "@mui/material";
-const technologies = [
+const tech = [
   {
     name: "HTML",
     icon: "/assets/tech/html.png",
@@ -49,13 +49,13 @@ const Stacks = () => {
   return (
     <>
       <br></br>
-      <h2 className="section-title">My Tech Stack</h2>
+      <div className="section-title">Tech Stack</div>
       <br></br>
       <Box
         className="stacks"
         sx={{ display: { xs: "none", md: "flex" } }}
       >
-        {technologies.map((tech) => (
+        {tech.map((tech) => (
           <div
             className="tech"
             key={tech.name}
@@ -66,10 +66,10 @@ const Stacks = () => {
         ))}
       </Box>
       <Box
-        className="stacks"
+        className="stacks-mobile"
         sx={{ display: { xs: "flex", md: "none" } }}
       >
-        {technologies.map((tech) => (
+        {tech.map((tech) => (
           <div
             className="tech-mobile"
             key={tech.name}
@@ -84,6 +84,7 @@ const Stacks = () => {
           </div>
         ))}
       </Box>
+      <br></br>
     </>
   );
 };

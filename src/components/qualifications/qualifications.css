@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
@@ -21,9 +22,18 @@
   text-align: center;
 }
 
+.stacks-mobile {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .tech-mobile {
-  width: 100px;
-  height: 100px;
+  width: 80px;
   /* background-color: yellow; */
   display: flex;
   flex-direction: column;
@@ -33,11 +43,15 @@
 
 .tech-mobile-logo {
   width: 80px;
-  height: 80px;
   /* background-color: aqua; */
   border-radius: 50%;
 }
 
 .tech-mobile-logo img {
   width: 80%;
+}
+
+.tech-mobile p {
+  width: 100%;
+  text-align: center;
 }
