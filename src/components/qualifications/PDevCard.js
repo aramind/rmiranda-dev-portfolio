@@ -13,7 +13,7 @@ const PDevCard = ({ index, name, institution, logo, cert }) => {
       ref={ref}
       className="pdev__card"
     >
-      <Tilt options={{ max: 45, scale: 1.5, speed: 500 }}>
+      <Tilt options={{ max: 45, scale: 1, speed: 500 }}>
         <Zoom
           in={inView}
           {...(inView ? { timeout: 1000 } : {})}

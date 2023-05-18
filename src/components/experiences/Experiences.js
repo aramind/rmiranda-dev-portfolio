@@ -41,7 +41,7 @@ const Experiences = () => {
             <TimelineConnector />
           </TimelineSeparator>
           <Slide
-            direction="left"
+            direction="top"
             in={inView}
             {...(inView ? { timeout: 1000 } : {})}
           >
@@ -65,7 +65,7 @@ const Experiences = () => {
             <TimelineConnector />
           </TimelineSeparator>
           <Slide
-            direction="left"
+            direction="top"
             in={inView}
             {...(inView ? { timeout: 1500 } : {})}
           >
@@ -89,7 +89,7 @@ const Experiences = () => {
             <TimelineConnector />
           </TimelineSeparator>
           <Slide
-            direction="left"
+            direction="top"
             in={inView}
             {...(inView ? { timeout: 2000 } : {})}
           >
