@@ -1,2 +1,12 @@
-.logo {
+.navlink {
+  font-family: "Roboto";
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navlink:hover {
+  color: var(--text-gold);
+}
+
+.navlink-menu {
 }

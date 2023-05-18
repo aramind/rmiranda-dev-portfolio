@@ -45,6 +45,7 @@ const PDev = () => {
         {pdevs.map((pdev, index) => (
           <PDevCard
             key={index}
+            index={index}
             {...pdev}
           />
         ))}

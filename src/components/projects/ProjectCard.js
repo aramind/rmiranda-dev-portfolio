@@ -1,18 +1,6 @@
 import React from "react";
 import { Tilt } from "react-tilt";
-import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../../helpers/motion";
-import {
-  Avatar,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Grid,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { Avatar, IconButton } from "@mui/material";
 import { styled } from "@mui/system";
 import muiTheme from "../../muiTheme";
 import { Launch, GitHub } from "@mui/icons-material";

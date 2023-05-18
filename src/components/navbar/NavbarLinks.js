@@ -11,6 +11,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { replaceChar } from "../../helpers/replaceChar";
 import muiTheme from "../../muiTheme";
 import { navlinks } from "../../data/data";
+import "./navbar.css";
 
 const NavBarLinks = () => {
   const [anchorMenu, setAnchorMenu] = useState(null);
@@ -24,7 +25,7 @@ const NavBarLinks = () => {
         direction="row"
         alignItems="center"
         justifyContent="flex-end"
-        gap={4}
+        gap={8}
         sx={{
           flexGrow: 1,
           display: { xs: "none", md: "flex" },
@@ -32,15 +33,13 @@ const NavBarLinks = () => {
       >
         {navlinks.map((link, index) => (
           <Link
+            className="navlink"
+            underline="none"
             key={index}
             href={`#${replaceChar(link, "_", "-")}-section`}
             sx={{
-              textDecoration: "none",
-              color: "#ddd",
-              textTransform: "capitalize",
-              "&:hover": {
-                color: muiTheme.palette.myColor.gold,
-              },
+              fontSize: "1.1rem",
+              color: "#ccc",
             }}
           >
             {replaceChar(link, "_", " ")}
@@ -62,7 +61,6 @@ const NavBarLinks = () => {
         open={Boolean(anchorMenu)}
         anchorEl={anchorMenu}
         onClose={handleCloseMenu}
-        // onClick={handleCloseMenu}
         sx={{
           display: { md: "none" },
         }}
@@ -70,12 +68,12 @@ const NavBarLinks = () => {
         {navlinks.map((link, index) => (
           <MenuItem
             key={index}
-            // onClose={handleCloseMenu}
             sx={{
               color: muiTheme.palette.bgcolor.darkBlue,
             }}
           >
             <Link
+              className="navlink"
               color="inherit"
               key={index}
               href={`#${replaceChar(link, "_", "-")}-section`}

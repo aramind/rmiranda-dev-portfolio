@@ -1,5 +1,7 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import { Grow } from "@mui/material";
+import { useInView } from "react-intersection-observer";
 
 const projects = [
   {
@@ -39,20 +41,31 @@ const projects = [
 ];
 
 const Projects = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: false, // Ensures the animation only triggers once
+  });
+
   return (
     <section
       id="projects-section"
       className="section projects"
+      ref={ref}
     >
       <div className="section__title">Projects</div>
-      <div className="section__content--flex">
-        {projects.map((proj, index) => (
-          <ProjectCard
-            key={index}
-            {...proj}
-          />
-        ))}
-      </div>
+      <Grow
+        in={inView}
+        style={{ transformOrigin: "0 0 0" }}
+        {...(inView ? { timeout: 2500 } : {})}
+      >
+        <div className="section__content--flex">
+          {projects.map((proj, index) => (
+            <ProjectCard
+              key={index}
+              {...proj}
+            />
+          ))}
+        </div>
+      </Grow>
     </section>
   );
 };

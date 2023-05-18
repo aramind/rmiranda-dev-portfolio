@@ -1,7 +1,8 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import React from "react";
 import muiTheme from "../../muiTheme";
 import { styled } from "@mui/system";
+import "./hero.css";
 
 const StyledText = styled(Typography)`
   font-family: "Prompt", sans-serif;
@@ -9,15 +10,16 @@ const StyledText = styled(Typography)`
 
 const StyledButton = styled(Button)`
   font-family: "Prompt", sans-serif;
+  font-size: 1.1rem;
   width: 100%;
   max-width: 300px;
+  padding: 10px 0 10px 0;
 `;
 
 const Hero = () => {
   return (
     <Stack
       sx={{
-        // border: "1px solid red",
         padding: "1.5rem",
         justifyContent: "center",
         height: { md: "100%" },
@@ -37,12 +39,14 @@ const Hero = () => {
         </StyledText>
         <StyledText
           variant="h1"
-          fontWeight="bold"
-          sx={{ fontSize: { xs: "3rem", sm: "3.5rem", md: "4rem" } }}
+          sx={{
+            fontSize: { xs: "3rem", sm: "3.5rem", md: "4rem" },
+          }}
         >
-          I'm Robin
+          I'm <b>Mon</b>.
         </StyledText>
         <StyledText
+          className="italic"
           variant="caption"
           color={muiTheme.palette.myColor.gold}
           fontSize="0.7rem"
@@ -53,7 +57,7 @@ const Hero = () => {
         <br></br>
         <StyledText
           variant="body2"
-          sx={{ fontSize: { xs: "1rem", sm: "1.3rem", md: "1.5rem" } }}
+          sx={{ fontSize: { xs: "0.9rem", sm: "1.3rem", md: "1.5rem" } }}
         >
           I provide solutions through web applications.
         </StyledText>

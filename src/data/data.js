@@ -1,6 +1,7 @@
 export const navlinks = [
   "experiences",
+  "tech_stack",
   "projects",
-  "qualifications",
+  "professional_development",
   "contact",
 ];

@@ -55,7 +55,6 @@
   width: 100%;
   text-align: center;
 }
-
 /* PDEV */
 
 .pdev__card {
@@ -91,6 +90,7 @@
   margin-top: 0.5rem;
   line-height: 0.8;
   font-size: 0.8rem;
+  color: #ccc;
 }
 
 .pdev__logos {
