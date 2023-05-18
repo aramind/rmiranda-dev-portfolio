@@ -10,7 +10,7 @@ import { Engineering, Code, School } from "@mui/icons-material";
 import { useInView } from "react-intersection-observer";
 
 import "./experiences.css";
-import { Slide } from "@mui/material";
+import { Grow } from "@mui/material";
 
 const Experiences = () => {
   const [ref, inView] = useInView({
@@ -40,9 +40,12 @@ const Experiences = () => {
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
-          <Slide
-            direction="top"
+          <Grow
             in={inView}
+            style={{
+              transformOrigin: "0 0 0",
+              transitionDelay: inView ? `500ms` : "0ms",
+            }}
             {...(inView ? { timeout: 1000 } : {})}
           >
             <TimelineContent>
@@ -54,7 +57,7 @@ const Experiences = () => {
                 </p>
               </div>
             </TimelineContent>
-          </Slide>
+          </Grow>
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
@@ -64,10 +67,13 @@ const Experiences = () => {
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
-          <Slide
-            direction="top"
+          <Grow
             in={inView}
-            {...(inView ? { timeout: 1500 } : {})}
+            style={{
+              transformOrigin: "0 0 0",
+              transitionDelay: inView ? `700ms` : "0ms",
+            }}
+            {...(inView ? { timeout: 1800 } : {})}
           >
             <TimelineContent>
               <div className="exp-details">
@@ -78,7 +84,7 @@ const Experiences = () => {
                 </p>
               </div>
             </TimelineContent>
-          </Slide>
+          </Grow>
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
@@ -88,10 +94,13 @@ const Experiences = () => {
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
-          <Slide
-            direction="top"
+          <Grow
             in={inView}
-            {...(inView ? { timeout: 2000 } : {})}
+            style={{
+              transformOrigin: "0 0 0",
+              transitionDelay: inView ? `800ms` : "0ms",
+            }}
+            {...(inView ? { timeout: 2800 } : {})}
           >
             <TimelineContent>
               <div className="exp-details">
@@ -102,7 +111,7 @@ const Experiences = () => {
                 </p>
               </div>
             </TimelineContent>
-          </Slide>
+          </Grow>
         </TimelineItem>
       </Timeline>
     </section>
