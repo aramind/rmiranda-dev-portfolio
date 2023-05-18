@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 const PDevCard = ({ index, name, institution, logo, cert }) => {
   const [ref, inView] = useInView({
-    triggerOnce: false, // Ensures the animation only triggers once
+    triggerOnce: false,
   });
 
   return (
