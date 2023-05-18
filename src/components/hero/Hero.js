@@ -18,26 +18,27 @@ const Hero = () => {
     <Stack
       sx={{
         // border: "1px solid red",
-        padding: "0 5% 5% 5%",
+        padding: "1.5rem",
         justifyContent: "center",
         height: { md: "100%" },
         position: { md: "fixed" },
         width: { md: "33vw" },
+        maxWidth: "500px",
       }}
       gap={2}
     >
       <Stack alignItems="flex-start">
         <StyledText
           variant="h2"
-          fontSize="2rem"
           color={muiTheme.palette.myColor.gold}
+          sx={{ fontSize: { xs: "2rem", sm: "3rem", md: "3.3rem" } }}
         >
           Hi!👋
         </StyledText>
         <StyledText
           variant="h1"
-          fontSize="2.5rem"
           fontWeight="bold"
+          sx={{ fontSize: { xs: "3rem", sm: "3.5rem", md: "4rem" } }}
         >
           I'm Robin
         </StyledText>
@@ -45,11 +46,15 @@ const Hero = () => {
           variant="caption"
           color={muiTheme.palette.myColor.gold}
           fontSize="0.7rem"
+          sx={{ fontSize: { xs: "0.9rem", sm: "1.3rem", md: "1.1rem" } }}
         >
           Passionate about turning ideas into reality.
         </StyledText>
         <br></br>
-        <StyledText variant="body2">
+        <StyledText
+          variant="body2"
+          sx={{ fontSize: { xs: "1rem", sm: "1.3rem", md: "1.5rem" } }}
+        >
           I provide solutions through web applications.
         </StyledText>
         <br></br>

@@ -1,0 +1,11 @@
+.exp-details {
+  padding: 1rem;
+  background-color: var(--dark-blue2);
+  border-bottom: 3px solid var(--medium-blue);
+  /* background-color: var(--medium-blue); */
+  border-radius: 0 0 5px 5px;
+}
+.exp-main {
+  font-size: 1.5rem;
+  color: var(--hightlighted-text);
+}

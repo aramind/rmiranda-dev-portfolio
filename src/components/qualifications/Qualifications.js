@@ -1,7 +1,7 @@
 import React from "react";
 
-const qualifications = () => {
-  return <div>qualifications</div>;
+const Qualifications = () => {
+  return <div style={{ minHeight: "100vh" }}>qualifications</div>;
 };
 
-export default qualifications;
+export default Qualifications;

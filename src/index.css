@@ -5,9 +5,9 @@
   list-style: none;
   text-decoration: none;
   /* font-family: 'Exo 2', sans-serif;
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Prompt', sans-serif; */
-  font-family: "Roboto", sans-serif;
+  font-family: 'Poppins', sans-serif; */
+  font-family: "Prompt", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
   /* font-family: 'Work Sans', sans-serif; */
   color: #eee;
 }
@@ -61,4 +61,8 @@ button:hover {
 
 .section {
   scroll-snap-align: "center";
+}
+
+.section-title {
+  font-size: 2rem;
 }

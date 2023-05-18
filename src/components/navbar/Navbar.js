@@ -8,14 +8,14 @@ const Navbar = () => {
   return (
     <AppBar
       elevation={5}
-      sx={{
-        boxShadow: `0px 0px 2px ${muiTheme.palette.myColor.gold}`,
-      }}
+      // sx={{
+      //   boxShadow: `0px 0px 2px ${muiTheme.palette.myColor.gold}`,
+      // }}
     >
       <Toolbar
         sx={{
           backgroundColor: muiTheme.palette.bgcolor.darkestBlue,
-          maxHeight: "80px",
+          // maxHeight: "80px",
         }}
       >
         <Stack
