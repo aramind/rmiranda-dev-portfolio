@@ -11,8 +11,11 @@ import "./experiences.css";
 
 const Experiences = () => {
   return (
-    <>
-      <div className="section-title">Experiences</div>
+    <section
+      id="experiences-section"
+      className="section experiences"
+    >
+      <div className="section__title">Experiences</div>
       <Timeline
         sx={{
           [`& .${timelineItemClasses.root}:before`]: {
@@ -76,7 +79,7 @@ const Experiences = () => {
           </TimelineContent>
         </TimelineItem>
       </Timeline>
-    </>
+    </section>
   );
 };
 

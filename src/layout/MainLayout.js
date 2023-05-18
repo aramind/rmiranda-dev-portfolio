@@ -5,6 +5,7 @@ import Experiences from "../components/experiences/Experiences";
 import HeroImage from "../components/hero-image/HeroImage";
 import Qualifications from "../components/qualifications/Qualifications";
 import Stacks from "../components/qualifications/Stacks";
+import Projects from "../components/projects/Projects";
 
 const MainLayout = () => {
   return (
@@ -45,7 +46,7 @@ const MainLayout = () => {
             <HeroImage />
             <Stacks />
             <Experiences />
-
+            <Projects />
             <Qualifications />
           </Grid>
         </Grid>

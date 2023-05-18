@@ -47,10 +47,13 @@ const tech = [
 
 const Stacks = () => {
   return (
-    <>
+    <section
+      id="stacks-section"
+      className="section projects"
+    >
       <br></br>
-      <div className="section-title">Tech Stack</div>
       <br></br>
+      <div className="section__title">Tech Stack</div>
       <Box
         className="stacks"
         sx={{ display: { xs: "none", md: "flex" } }}
@@ -85,7 +88,7 @@ const Stacks = () => {
         ))}
       </Box>
       <br></br>
-    </>
+    </section>
   );
 };
 
