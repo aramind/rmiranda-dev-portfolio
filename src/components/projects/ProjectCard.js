@@ -48,7 +48,7 @@ const ProjectCard = ({
   return (
     <Tilt
       className="project__card"
-      options={{ max: 90, scale: 1, speed: 500 }}
+      options={{ max: 45, scale: 1, speed: 500 }}
     >
       <div className="project__content">
         <div className="project__image centered">

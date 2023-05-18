@@ -55,3 +55,59 @@
   width: 100%;
   text-align: center;
 }
+
+/* PDEV */
+
+.pdev__card {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: var(--dark-blue2);
+  border-bottom: 3px solid var(--medium-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pdev__details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.pdev__title {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--text-gold);
+}
+
+.pdev__institution {
+  margin-top: 0.5rem;
+  line-height: 0.8;
+  font-size: 0.8rem;
+}
+
+.pdev__logos {
+  gap: 0.5rem;
+}
+
+.pdev__logo {
+  height: 25px;
+  width: 100px;
+}
+
+.pdev__logo img {
+  height: 100%;
+  width: 100%;
+  border-radius: 12.5px;
+}
+
+.pdev__action {
+  margin-top: 2rem;
+}
