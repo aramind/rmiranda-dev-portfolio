@@ -38,14 +38,14 @@ const Hero = () => {
         <StyledText
           variant="h2"
           color={muiTheme.palette.myColor.gold}
-          sx={{ fontSize: { xs: "2rem", sm: "3rem", md: "3.3rem" } }}
+          sx={{ fontSize: { xs: "1.5rem", sm: "2rem", md: "2.7rem" } }}
         >
           Hi!👋
         </StyledText>
         <StyledText
           variant="h1"
           sx={{
-            fontSize: { xs: "3rem", sm: "3.5rem", md: "4rem" },
+            fontSize: { xs: "2.5rem", sm: "3rem", md: "3.5rem" },
           }}
         >
           I'm <b id="my-name">Mon</b>.
@@ -55,23 +55,72 @@ const Hero = () => {
           variant="caption"
           color={muiTheme.palette.myColor.gold}
           fontSize="0.7rem"
-          sx={{ fontSize: { xs: "0.9rem", sm: "1.3rem", md: "1.1rem" } }}
+          sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" } }}
         >
           Passionate about turning ideas into reality.
         </StyledText>
         <br></br>
-        <StyledText
-          variant="body2"
-          sx={{ fontSize: { xs: "0.9rem", sm: "1.3rem", md: "1.5rem" } }}
-        >
-          I provide solutions through web applications.
-        </StyledText>
+        <Stack spacing={2}>
+          <StyledText
+            variant="body2"
+            sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem" } }}
+          >
+            I provide solutions through web applications.
+          </StyledText>
+          {/* <Stack spacing={0.5}>
+            <StyledText
+              variant="body2"
+              sx={{
+                fontFamily: "Exo 2",
+                color: muiTheme.palette.myColor.pink,
+                fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" },
+              }}
+            >
+              {`
+              currently looking = ( ) =>  { for web dev related project and/or work. 
+              `}
+            </StyledText>
+            <StyledText
+              variant="body2"
+              sx={{
+                fontFamily: "Exo 2",
+                color: muiTheme.palette.myColor.pink,
+                fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" },
+              }}
+            >
+              {`};`}
+            </StyledText>
+          </Stack> */}
+        </Stack>
         <br></br>
       </Stack>
+
       <Stack
         gap={2}
         alignItems="flex-start"
       >
+        <Stack spacing={0.5}>
+          <StyledText
+            variant="body2"
+            sx={{
+              fontFamily: "Exo 2",
+              color: muiTheme.palette.myColor.pink,
+              fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" },
+            }}
+          >
+            const [work, setWork] = useState(<span id="null-word">null</span>)
+          </StyledText>
+          <StyledText
+            variant="body2"
+            sx={{
+              fontFamily: "Exo 2",
+              color: muiTheme.palette.myColor.pink,
+              fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" },
+            }}
+          >
+            setWork (
+          </StyledText>
+        </Stack>
         <Link
           className=" hero-btn-link"
           href="https://drive.google.com/file/d/1hS8Bvp5exjh9cPVTS1nl1iyAWvLj960s/view?usp=share_link"
@@ -92,6 +141,16 @@ const Hero = () => {
         >
           <StyledButton variant="contained">Contact Me</StyledButton>
         </Link>
+        <StyledText
+          variant="body2"
+          sx={{
+            fontFamily: "Exo 2",
+            color: muiTheme.palette.myColor.pink,
+            fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" },
+          }}
+        >
+          ) ;
+        </StyledText>
       </Stack>
     </Stack>
   );
