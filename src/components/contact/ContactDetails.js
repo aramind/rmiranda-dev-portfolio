@@ -16,7 +16,7 @@ const contactDetails = [
     value: "r.m.miranda.cs@gmail.com",
     url: "/assets/contact-details/email.png",
     icon: <Email />,
-    href: "mailto:myUniqueEmail@uplift.com?subject=Inquiry&body=Message",
+    href: "mailto:r.m.miranda.cs@gmail.com?subject=Inquiry&body=Message",
   },
 ];
 
