@@ -44,7 +44,7 @@ const Experiences = () => {
             in={inView}
             style={{
               transformOrigin: "0 0 0",
-              transitionDelay: inView ? `500ms` : "0ms",
+              transitionDelay: inView ? `200ms` : "0ms",
             }}
             {...(inView ? { timeout: 1000 } : {})}
           >

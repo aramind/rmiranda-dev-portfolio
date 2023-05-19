@@ -7,19 +7,23 @@ const HeroImage = () => {
       className="centered"
       sx={{
         backgroundColor: "#1a5559",
-        height: { xs: "600px", md: "100vh" },
+        height: { xs: "700px", md: "100vh" },
+        maxHeight: { xs: "700px", md: "700px" },
         width: { xs: "100%", md: "100%" },
+        overflow: "hidden",
       }}
     >
       <Box
         sx={{
           backgroundImage: `url(./assets/images/image-robin-no-bg-reduced.png)`,
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
+          backgroundPosition: { xs: "center", md: "calc(50% + 250px) -180px" },
           backgroundSize: "fit",
+
           height: { xs: "700px", md: "100vh" },
           width: { xs: "100%", md: "100%" },
           scrollSnapAlign: "center",
+          backgroundAttachment: { md: "fixed" },
         }}
       ></Box>
     </Box>

@@ -26,6 +26,7 @@ const Hero = () => {
         position: { md: "fixed" },
         width: { md: "33vw" },
         maxWidth: "500px",
+        backgroundColor: "yellow",
       }}
       gap={2}
     >
