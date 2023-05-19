@@ -2,10 +2,6 @@
   font-style: italic;
 }
 
-.hero {
-  background-image: linear-gradient(
-    to bottom,
-    var(--dark-blue),
-    var(--medium-blue)
-  );
+#my-name:hover {
+  color: var(--hightlighted-text);
 }

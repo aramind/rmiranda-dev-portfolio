@@ -3,7 +3,6 @@ import React from "react";
 import muiTheme from "../../muiTheme";
 import { styled } from "@mui/system";
 import "./hero.css";
-import "./stars.css";
 const StyledText = styled(Typography)`
   font-family: "Prompt", sans-serif;
 `;
@@ -19,6 +18,7 @@ const StyledButton = styled(Button)`
 const Hero = () => {
   return (
     <Stack
+      className="hero"
       sx={{
         padding: "1.5rem",
         justifyContent: "center",
@@ -31,7 +31,10 @@ const Hero = () => {
       }}
       gap={2}
     >
-      <Stack alignItems="flex-start">
+      <Stack
+        alignItems="flex-start"
+        className="header"
+      >
         <StyledText
           variant="h2"
           color={muiTheme.palette.myColor.gold}
@@ -45,7 +48,7 @@ const Hero = () => {
             fontSize: { xs: "3rem", sm: "3.5rem", md: "4rem" },
           }}
         >
-          I'm <b>Mon</b>.
+          I'm <b id="my-name">Mon</b>.
         </StyledText>
         <StyledText
           className="italic"
@@ -71,7 +74,12 @@ const Hero = () => {
       >
         <StyledButton variant="contained">View my Resume</StyledButton>
         <StyledButton variant="contained">Download my Resume</StyledButton>
-        <StyledButton variant="contained">Contact Me</StyledButton>
+        <StyledButton
+          variant="contained"
+          className="contact-btn"
+        >
+          Contact Me
+        </StyledButton>
       </Stack>
     </Stack>
   );
