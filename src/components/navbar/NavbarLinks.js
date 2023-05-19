@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Button,
   IconButton,
   Link,
   Menu,
@@ -11,7 +12,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { replaceChar } from "../../helpers/replaceChar";
 import muiTheme from "../../muiTheme";
 import { navlinks } from "../../data/data";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 import "./navbar.css";
 
@@ -73,15 +73,28 @@ const NavBarLinks = () => {
             sx={{
               color: muiTheme.palette.bgcolor.darkBlue,
             }}
+            onClick={handleCloseMenu}
           >
             <Link
               className="navlink"
               color="inherit"
-              key={index}
-              href={`#${replaceChar(link, "_", "-")}-section`}
               underline="none"
+              href={`#${replaceChar(link, "_", "-")}-section`}
+              sx={{
+                width: "100%",
+              }}
             >
-              {replaceChar(link, "_", " ")}
+              <Button
+                variant="text"
+                size="large"
+                sx={{
+                  padding: 0,
+                  width: "100%",
+                  height: "40px",
+                }}
+              >
+                {replaceChar(link, "_", " ")}
+              </Button>
             </Link>
           </MenuItem>
         ))}
