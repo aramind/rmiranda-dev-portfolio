@@ -114,6 +114,7 @@ const Experiences = () => {
           </Grow>
         </TimelineItem>
       </Timeline>
+      <br></br>
     </section>
   );
 };

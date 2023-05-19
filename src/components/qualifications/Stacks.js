@@ -51,8 +51,6 @@ const Stacks = () => {
       id="stacks-section"
       className="section projects"
     >
-      <br></br>
-      <br></br>
       <div className="section__title">Tech Stack</div>
       <Box
         className="stacks"

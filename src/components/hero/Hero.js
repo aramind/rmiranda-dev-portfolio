@@ -3,7 +3,7 @@ import React from "react";
 import muiTheme from "../../muiTheme";
 import { styled } from "@mui/system";
 import "./hero.css";
-
+import "./stars.css";
 const StyledText = styled(Typography)`
   font-family: "Prompt", sans-serif;
 `;
@@ -23,10 +23,11 @@ const Hero = () => {
         padding: "1.5rem",
         justifyContent: "center",
         height: { md: "100%" },
+        maxHeight: "1000px",
         position: { md: "fixed" },
         width: { md: "33vw" },
         maxWidth: "500px",
-        backgroundColor: "yellow",
+        // backgroundColor: "yellow",
       }}
       gap={2}
     >

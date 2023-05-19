@@ -3,7 +3,6 @@ import Hero from "../components/hero/Hero";
 import { Box, Grid } from "@mui/material";
 import Experiences from "../components/experiences/Experiences";
 import HeroImage from "../components/hero-image/HeroImage";
-import Qualifications from "../components/qualifications/Qualifications";
 import Stacks from "../components/qualifications/Stacks";
 import Projects from "../components/projects/Projects";
 import PDev from "../components/qualifications/PDev";
@@ -44,9 +43,7 @@ const MainLayout = () => {
             <Experiences />
             <Stacks />
             <Projects />
-
             <PDev />
-            <Qualifications />
           </Grid>
         </Grid>
       </Box>

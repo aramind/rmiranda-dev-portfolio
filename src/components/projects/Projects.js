@@ -66,6 +66,7 @@ const Projects = () => {
           ))}
         </div>
       </Grow>
+      <br></br>
     </section>
   );
 };
