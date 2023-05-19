@@ -72,10 +72,18 @@ const Hero = () => {
         gap={2}
         alignItems="flex-start"
       >
-        <Link className=" hero-btn-link">
+        <Link
+          className=" hero-btn-link"
+          href="https://drive.google.com/file/d/1hS8Bvp5exjh9cPVTS1nl1iyAWvLj960s/view?usp=share_link"
+          target="_blank"
+        >
           <StyledButton variant="contained">View my Resume</StyledButton>
         </Link>
-        <Link className=" hero-btn-link">
+        <Link
+          className=" hero-btn-link"
+          href="/assets/files/Resume_Robin Mon R. Miranda.pdf"
+          download
+        >
           <StyledButton variant="contained">Download my Resume</StyledButton>
         </Link>
         <Link

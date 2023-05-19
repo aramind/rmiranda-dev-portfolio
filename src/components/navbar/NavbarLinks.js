@@ -15,6 +15,21 @@ import { navlinks } from "../../data/data";
 
 import "./navbar.css";
 
+const navIcons = [
+  {
+    name: "linkedin",
+    href: "https://www.linkedin.com/in/robin-mon-miranda",
+  },
+  {
+    name: "github",
+    href: "https://github.com/aramind",
+  },
+  {
+    name: "resume",
+    href: "https://drive.google.com/file/d/1hS8Bvp5exjh9cPVTS1nl1iyAWvLj960s/view?usp=share_link",
+  },
+];
+
 const NavBarLinks = () => {
   const [anchorMenu, setAnchorMenu] = useState(null);
 
@@ -27,7 +42,7 @@ const NavBarLinks = () => {
         direction="row"
         alignItems="center"
         justifyContent="flex-end"
-        gap={8}
+        gap={6}
         sx={{
           flexGrow: 1,
           display: { xs: "none", md: "flex" },
@@ -47,6 +62,26 @@ const NavBarLinks = () => {
             {replaceChar(link, "_", " ")}
           </a>
         ))}
+        <div className="navbar__socials centered">
+          {navIcons.map((social) => (
+            <Tooltip
+              key={social.name}
+              title={`view ${social.name}`}
+              arrow
+              placement="top-end"
+            >
+              <Link
+                href={social.href}
+                target="_blank"
+              >
+                <img
+                  src={`/assets/socials/${social.name}.png`}
+                  alt={`${social.name} logo`}
+                />
+              </Link>
+            </Tooltip>
+          ))}
+        </div>
       </Stack>
       <Tooltip
         title="Show Links"
@@ -98,6 +133,26 @@ const NavBarLinks = () => {
             </Link>
           </MenuItem>
         ))}
+        <div className="navbar__socials centered">
+          {navIcons.map((social) => (
+            <Tooltip
+              key={social.name}
+              title={`view ${social.name}`}
+              arrow
+              placement="top-end"
+            >
+              <Link
+                href={social.href}
+                target="_blank"
+              >
+                <img
+                  src={`/assets/socials/${social.name}.png`}
+                  alt={`${social.name} logo`}
+                />
+              </Link>
+            </Tooltip>
+          ))}
+        </div>
       </Menu>
     </>
   );

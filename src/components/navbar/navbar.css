@@ -7,3 +7,11 @@
 .navlink:hover {
   color: var(--text-gold);
 }
+
+.navbar__socials {
+  gap: 0.8rem;
+}
+
+.navbar__socials img {
+  height: 30px;
+}
