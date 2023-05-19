@@ -66,7 +66,6 @@ const FormInputs = () => {
                 variant="standard"
                 InputProps={{ style: inputStyle }}
                 required
-                autoFocus
                 onChange={(e) => setName(e.target.value)}
                 error={!validateName(name)}
                 helperText={!validateName(name) ? "Invalid name" : "Required"}
