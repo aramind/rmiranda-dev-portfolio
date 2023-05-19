@@ -73,10 +73,6 @@ section {
   align-items: center;
 }
 
-.section {
-  scroll-snap-align: "center";
-}
-
 .section__title {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -84,6 +80,18 @@ section {
 
 .section__subtitle {
   font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.sub-section:hover .section__subtitle {
+  animation: animate 0.5s ease infinite;
+  color: var(--hightlighted-text);
+  text-transform: uppercase;
+}
+
+.section__subtitle {
+  color: var(--hightlighted-text);
+  margin-bottom: 1rem;
 }
 
 .section:hover .section__title {

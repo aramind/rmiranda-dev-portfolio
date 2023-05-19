@@ -6,6 +6,7 @@ import HeroImage from "../components/hero-image/HeroImage";
 import Stacks from "../components/qualifications/Stacks";
 import Projects from "../components/projects/Projects";
 import PDev from "../components/qualifications/PDev";
+import Contact from "../components/contact/Contact";
 
 const MainLayout = () => {
   return (
@@ -47,6 +48,7 @@ const MainLayout = () => {
           </Grid>
         </Grid>
       </Box>
+      <Contact />
     </Box>
   );
 };

@@ -22,7 +22,6 @@ const HeroImage = () => {
 
           height: { xs: "700px", md: "100vh" },
           width: { xs: "100%", md: "100%" },
-          scrollSnapAlign: "center",
           backgroundAttachment: { md: "fixed" },
         }}
       ></Box>
