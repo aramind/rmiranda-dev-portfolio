@@ -20,7 +20,7 @@ const Navbar = () => {
           justifyContent="space-between"
         >
           <Link
-            href={`/`}
+            href={`#`}
             underline="none"
           >
             <div className="logo">

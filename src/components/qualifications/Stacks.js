@@ -48,7 +48,7 @@ const tech = [
 const Stacks = () => {
   return (
     <section
-      id="stacks-section"
+      id="tech-stack-section"
       className="section projects"
     >
       <div className="section__title">Tech Stack</div>

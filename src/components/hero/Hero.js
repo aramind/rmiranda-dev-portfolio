@@ -1,4 +1,4 @@
-import { Button, Stack, Typography } from "@mui/material";
+import { Button, Link, Stack, Typography } from "@mui/material";
 import React from "react";
 import muiTheme from "../../muiTheme";
 import { styled } from "@mui/system";
@@ -72,14 +72,18 @@ const Hero = () => {
         gap={2}
         alignItems="flex-start"
       >
-        <StyledButton variant="contained">View my Resume</StyledButton>
-        <StyledButton variant="contained">Download my Resume</StyledButton>
-        <StyledButton
-          variant="contained"
-          className="contact-btn"
+        <Link className=" hero-btn-link">
+          <StyledButton variant="contained">View my Resume</StyledButton>
+        </Link>
+        <Link className=" hero-btn-link">
+          <StyledButton variant="contained">Download my Resume</StyledButton>
+        </Link>
+        <Link
+          className=" hero-btn-link contact-btn"
+          href="#contact-section"
         >
-          Contact Me
-        </StyledButton>
+          <StyledButton variant="contained">Contact Me</StyledButton>
+        </Link>
       </Stack>
     </Stack>
   );

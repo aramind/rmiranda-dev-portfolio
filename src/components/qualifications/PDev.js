@@ -37,7 +37,7 @@ const pdevs = [
 const PDev = () => {
   return (
     <section
-      id="pdev-section"
+      id="professional-development-section"
       className="section pdev"
     >
       <div className="section__title">Professional Development</div>

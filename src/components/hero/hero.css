@@ -5,3 +5,7 @@
 #my-name:hover {
   color: var(--hightlighted-text);
 }
+
+.hero-btn-link {
+  width: 300px;
+}

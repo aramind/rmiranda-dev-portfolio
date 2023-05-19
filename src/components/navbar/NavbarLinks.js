@@ -11,6 +11,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { replaceChar } from "../../helpers/replaceChar";
 import muiTheme from "../../muiTheme";
 import { navlinks } from "../../data/data";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+
 import "./navbar.css";
 
 const NavBarLinks = () => {
@@ -32,7 +34,7 @@ const NavBarLinks = () => {
         }}
       >
         {navlinks.map((link, index) => (
-          <Link
+          <a
             className="navlink"
             underline="none"
             key={index}
@@ -43,7 +45,7 @@ const NavBarLinks = () => {
             }}
           >
             {replaceChar(link, "_", " ")}
-          </Link>
+          </a>
         ))}
       </Stack>
       <Tooltip
