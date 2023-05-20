@@ -11,7 +11,7 @@
   <p align="center">
     My personal web developer portfolio created during the last weeks of my full stack web development bootcamp at Uplift Code Camp. 
     <br />
-    <a href="https://monitime.onrender.com">View Demo</a>
+    <a href="https://rmiranda-dev-portfolio.onrender.com/">rmiranda | dev-portfolio</a>
   </p>
 </div>
 
@@ -31,10 +31,10 @@ implementation of certain functionalities.
 
 ### Built With
 
-- (./public/assets/tech/html.png)
-- (./public/assets/tech/css.png)
-- (./public/assets/tech/javascript.png)
-- (./public/assets/tech/reactjs.png)
+- ![HTML5](./public/assets/tech/html.png)
+- ![CSS3](./public/assets/tech/css.png)
+- ![Modern Javascript](./public/assets/tech/javascript.png)
+- ![ReactJs](./public/assets/tech/reactjs.png)
 
 ## License
 
