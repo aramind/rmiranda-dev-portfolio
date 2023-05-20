@@ -4,7 +4,7 @@ import React from "react";
 const HeroImage = () => {
   return (
     <Box
-      className="centered"
+      className="hero-image centered"
       sx={{
         backgroundColor: "#1a5559",
         height: { xs: "700px", md: "100vh" },

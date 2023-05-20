@@ -38,7 +38,7 @@ const CdComplete = ({ value, icon, href }) => {
 const ContactDetails = () => {
   return (
     <Stack className="contact-details sub-section">
-      <p className="section__subtitle">contact & socials</p>
+      <p className="section__subtitle">Robin Mon R. Miranda</p>
       {contactDetails.map((cd) => (
         <CdComplete
           key={cd?.name}

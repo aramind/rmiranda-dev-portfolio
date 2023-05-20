@@ -1,4 +1,11 @@
-import { Button, Link, Stack, Typography } from "@mui/material";
+import {
+  Button,
+  Link,
+  Stack,
+  Tooltip,
+  Typography,
+  tooltipClasses,
+} from "@mui/material";
 import React from "react";
 import muiTheme from "../../muiTheme";
 import { styled } from "@mui/system";
@@ -14,6 +21,19 @@ const StyledButton = styled(Button)`
   max-width: 300px;
   padding: 10px 0 10px 0;
 `;
+
+const LightTooltip = styled(({ className, ...props }) => (
+  <Tooltip
+    {...props}
+    classes={{ popper: className }}
+  />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: "transparent",
+    color: "#fff",
+    fontSize: 20,
+  },
+}));
 
 const Hero = () => {
   return (
@@ -42,14 +62,19 @@ const Hero = () => {
         >
           Hi!👋
         </StyledText>
-        <StyledText
-          variant="h1"
-          sx={{
-            fontSize: { xs: "2.5rem", sm: "3rem", md: "3.5rem" },
-          }}
+        <LightTooltip
+          title="ROBIN MON R. MIRANDA"
+          placement="right-start"
         >
-          I'm <b id="my-name">Mon</b>.
-        </StyledText>
+          <StyledText
+            variant="h1"
+            sx={{
+              fontSize: { xs: "2.5rem", sm: "3rem", md: "3.5rem" },
+            }}
+          >
+            I'm <b id="my-name">Mon</b>.
+          </StyledText>
+        </LightTooltip>
         <StyledText
           className="italic"
           variant="caption"
