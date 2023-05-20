@@ -12,7 +12,7 @@ const Contact = () => {
       className="section contact-section centered"
       sx={{
         paddingX: { sx: "10px", md: "50px" },
-        minHeight: { md: `calc(100vh - 80px)` },
+        minHeight: { md: `calc(100vh - 110px)` },
       }}
     >
       <div className="contact-content">
