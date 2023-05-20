@@ -11,7 +11,7 @@
   <p align="center">
     My personal web developer portfolio created during the last weeks of my full stack web development bootcamp at Uplift Code Camp. 
     <br />
-    <a href="https://rmiranda-dev-portfolio.onrender.com/">rmiranda | dev-portfolio</a>
+    <a href="https://rmiranda-dev-portfolio.onrender.com/" target="_blank" >rmiranda | dev-portfolio</a>
   </p>
 </div>
 
