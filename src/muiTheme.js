@@ -18,6 +18,12 @@ const muiTheme = createTheme({
       gold: "goldenrod",
     },
   },
+  success: {
+    main: "#2b9348",
+  },
+  error: {
+    main: "#ef476f",
+  },
 });
 
 export default muiTheme;

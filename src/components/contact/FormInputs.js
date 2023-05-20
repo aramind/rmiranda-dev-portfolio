@@ -1,10 +1,11 @@
-import { Button, Grid, Stack, TextField } from "@mui/material";
-import React, { useRef, useState } from "react";
+import { Alert, Button, Grid, Snackbar, Stack, TextField } from "@mui/material";
+import React, { useEffect, useRef, useState } from "react";
 import muiTheme from "../../muiTheme";
 import validateName from "../../helpers/validateName";
 import validateEmail from "../../helpers/validateEmail";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import emailjs from "emailjs-com";
 
 const inputStyle = {
   color: muiTheme.palette.primary.main,
@@ -13,15 +14,86 @@ const inputStyle = {
   minLength: 3,
   padding: 0,
 };
+
 const FormInputs = () => {
+  const [success, setSuccess] = useState(null);
+  const [openSb, setOpenSb] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+
   const [name, setName] = useState("Your name");
   const [email, setEmail] = useState("mail@mail.com");
   const [subject, setSubject] = useState("Subject");
+  const [message, setMessage] = useState("Template message");
   // ** references
   const nameRef = useRef();
   const emailRef = useRef();
   const subjectRef = useRef();
   const messageRef = useRef();
+  const formRef = useRef();
+
+  useEffect(() => {
+    const form = document.createElement("form");
+    form.style.display = "none";
+    formRef.current = form;
+
+    const nameInput = document.createElement("input");
+    nameInput.type = "text";
+    nameInput.name = "name";
+    nameInput.value = name;
+    form.appendChild(nameInput);
+
+    const emailInput = document.createElement("input");
+    emailInput.type = "email";
+    emailInput.name = "email";
+    emailInput.value = email;
+    form.appendChild(emailInput);
+
+    const subjectInput = document.createElement("input");
+    subjectInput.type = "text";
+    subjectInput.name = "subject";
+    subjectInput.value = subject;
+    form.appendChild(subjectInput);
+
+    const messageInput = document.createElement("textarea");
+    messageInput.name = "message";
+    messageInput.value = message;
+    form.appendChild(messageInput);
+
+    document.body.appendChild(form);
+  }, [name, email, subject, message]);
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpenSb(false);
+    setDisabled(false);
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    setDisabled(true);
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSuccess(true);
+        },
+        (error) => {
+          console.log(error.text);
+          setSuccess(false);
+        }
+      );
+    setOpenSb(true);
+  };
 
   return (
     <Stack
@@ -42,7 +114,7 @@ const FormInputs = () => {
           Feel free to send me a message.
         </p>
       </Stack>
-      <form>
+      <form onSubmit={sendEmail}>
         <Stack
           className="forn__inputs"
           spacing={1}
@@ -58,8 +130,9 @@ const FormInputs = () => {
             >
               <TextField
                 className="form__input"
-                id="form-name"
+                id="name"
                 label="name"
+                name="name"
                 type="text"
                 inputRef={nameRef}
                 fullWidth
@@ -78,7 +151,8 @@ const FormInputs = () => {
             >
               <TextField
                 className="form__input"
-                id="form-email"
+                id="email"
+                name="email"
                 label="email"
                 type="email"
                 inputRef={emailRef}
@@ -96,7 +170,8 @@ const FormInputs = () => {
           </Grid>
           <TextField
             className="form__input"
-            id="form-subject"
+            id="subject"
+            name="subject"
             label="subject"
             type="text"
             inputRef={subjectRef}
@@ -115,18 +190,19 @@ const FormInputs = () => {
           <p className="form__text form__text__subheader ">Message</p>
           <TextField
             className="form__input"
-            id="form-message"
+            id="message"
+            name="message"
             type="text"
             inputRef={messageRef}
             fullWidth
             variant="standard"
             InputLabelProps={{ style: inputStyle }}
             required
-            onChange={(e) => setSubject(e.target.value)}
-            error={subject.trim().length < 2}
+            onChange={(e) => setMessage(e.target.value)}
+            error={message.trim().length < 2}
             helperText={
-              subject.trim().length < 2
-                ? "Please include a valid subject"
+              message.trim().length < 2
+                ? "Please include a message"
                 : "Required"
             }
             multiline
@@ -134,6 +210,7 @@ const FormInputs = () => {
           <Button
             id="form-send"
             variant="contained"
+            type="submit"
             endIcon={
               <FontAwesomeIcon
                 className="btn-icon"
@@ -141,9 +218,32 @@ const FormInputs = () => {
                 beat
               />
             }
+            disabled={disabled}
           >
             <p>SEND</p>
           </Button>
+          <Snackbar
+            anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+            open={openSb && success}
+            autoHideDuration={15000}
+            onClose={handleClose}
+          >
+            <Alert
+              onClose={handleClose}
+              sx={{
+                width: "100%",
+                backgroundColor: `${
+                  success
+                    ? muiTheme.palette.success.main
+                    : muiTheme.palette.error.main
+                }`,
+              }}
+            >
+              {success
+                ? "Message sent. I'll get back to you soon. 😊"
+                : "Opsieeee...an error occurred. Please try again."}
+            </Alert>
+          </Snackbar>
         </Stack>
       </form>
       <br></br>
