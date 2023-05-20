@@ -31,7 +31,9 @@ const ProjectCard = ({
   description,
   tech,
   image,
-  source_code_link,
+  repo,
+  haslive,
+  live,
 }) => {
   return (
     <Tilt
@@ -61,10 +63,18 @@ const ProjectCard = ({
           ))}
         </div>
         <div className="project__actions">
-          <StyledIconButton>
-            <Launch />
-          </StyledIconButton>
-          <StyledIconButton>
+          {haslive && (
+            <StyledIconButton
+              href={live}
+              target="_blank"
+            >
+              <Launch />
+            </StyledIconButton>
+          )}
+          <StyledIconButton
+            href={repo}
+            target="_blank"
+          >
             <GitHub />
           </StyledIconButton>
         </div>

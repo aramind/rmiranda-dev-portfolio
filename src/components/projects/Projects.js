@@ -5,20 +5,43 @@ import { useInView } from "react-intersection-observer";
 
 const projects = [
   {
+    name: "Basic Portfolio",
+    description:
+      "My first project related to web development. Built using only HTML and CSS.",
+    tech: ["html", "css"],
+    image: "/assets/projects/port1.jpg",
+    repo: "https://github.com/aramind/first-web-dev-portfolio",
+    haslive: true,
+    live: "https://23cond.github.io/my-dev-portfolio/",
+  },
+  {
     name: "OOO Game",
     description:
-      "A browser game built using Vanilla Javascript, HTML5, and CSS3",
+      "Outsmarting Offworld Oppressors Game. A simple browser game based on odd one out puzzles. Built using Vanilla Javascript, HTML5, and CSS3",
     tech: ["html", "css", "javascript"],
     image: "/assets/projects/ooo.jpg",
-    source_code_link: "https://github.com/",
+    repo: "https://github.com/aramind/OOO---Outsmarting-Offworld-Oppressors-Game",
+    haslive: true,
+    live: "https://aramind.github.io/OOO---Outsmarting-Offworld-Oppressors-Game/",
   },
   {
     name: "MONitime v1",
-    description:
-      "A time monitoring app created with MERN stack + Material UI, helping users track their daily activities and the time they spend on them.",
+    description: "A time monitoring app for personal use running on browser.",
     tech: ["html", "css", "javascript", "react"],
     image: "/assets/projects/monitime1.jpg",
-    source_code_link: "https://aramind-monitime-app.netlify.app/",
+    repo: "https://github.com/aramind/MONitime-App-v1",
+    haslive: true,
+    live: "https://aramind-monitime-app.netlify.app/",
+  },
+  {
+    name: "monitime-api",
+    description:
+      "A RESTful API used as the backend of MONitime app. Provides the needed API requests and database management of the app.",
+    tech: ["nodejs", "express", "mongodb", "mongoose"],
+    image: "/assets/projects/monitime-api.jpg",
+    repo: "https://github.com/aramind/monitime-api",
+    haslive: false,
+    live: "https://github.com/aramind/monitime-api",
   },
   {
     name: "MONitime v2",
@@ -36,7 +59,19 @@ const projects = [
       "mongoose",
     ],
     image: "/assets/projects/monitime2.png",
-    source_code_link: "https://monitime.onrender.com/",
+    repo: "https://github.com/aramind/MONitime",
+    haslive: true,
+    live: "https://monitime.onrender.com/",
+  },
+  {
+    name: "rmiranda | portfolio",
+    description:
+      "My dev portfolio created after finishing the full stack web dev bootcamp of Uplift Code Camp.",
+    tech: ["html", "css", "javascript", "react", "mui"],
+    image: "/assets/projects/port2.jpg",
+    repo: "https://github.com/aramind/rmiranda-dev-portfolio",
+    haslive: true,
+    live: "https://rmiranda-dev-portfolio.onrender.com/",
   },
 ];
 
