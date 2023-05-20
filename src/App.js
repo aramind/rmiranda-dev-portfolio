@@ -1,3 +1,4 @@
+import FloatingNav from "./components/navbar/FloatingNav";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./layout/Footer";
 import MainLayout from "./layout/MainLayout";
@@ -7,6 +8,7 @@ function App() {
     <>
       <Navbar />
       <MainLayout />
+      <FloatingNav />
       <Footer />
     </>
   );
