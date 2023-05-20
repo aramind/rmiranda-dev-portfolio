@@ -31,10 +31,12 @@ implementation of certain functionalities.
 
 ### Built With
 
-- ![HTML5](./public/assets/tech/html.png)
-- ![CSS3](./public/assets/tech/css.png)
-- ![Modern Javascript](./public/assets/tech/javascript.png)
-- ![ReactJs](./public/assets/tech/reactjs.png)
+- HTML5
+- CSS3
+- Javascript
+- ReactJS
+- Material UI
+- Threejs
 
 ## License
 
