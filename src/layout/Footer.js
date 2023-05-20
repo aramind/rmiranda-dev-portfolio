@@ -7,7 +7,7 @@ const Footer = () => {
       className="footer centered"
       style={{}}
     >
-      <p>Designed and Coded by</p>
+      <p>Created by</p>
       <a
         href="https://www.linkedin.com/in/robin-mon-miranda"
         target="_blank"
