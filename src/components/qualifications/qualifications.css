@@ -62,6 +62,7 @@
   height: 300px;
   border-radius: 50%;
   padding: 5px;
+  /* background-color: var(--dark-blue2); */
   background-color: var(--dark-blue2);
   border-bottom: 3px solid var(--medium-blue);
   display: flex;
@@ -110,4 +111,21 @@
 
 .pdev__action {
   margin-top: 2rem;
+}
+
+/*  */
+.pdev__card2 {
+  padding: 5px;
+  /* background-color: var(--dark-blue2);
+  border-bottom: 3px solid var(--medium-blue); */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  /* border: 2px solid green; */
+  position: relative;
+}
+
+.pdev2--img {
+  object-fit: cover;
 }

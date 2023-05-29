@@ -13,10 +13,10 @@ const contactDetails = [
   },
   {
     name: "email",
-    value: "r.m.miranda.cs@gmail.com",
+    value: "r.m.miranda.ece@gmail.com",
     url: "/assets/contact-details/email.png",
     icon: <Email />,
-    href: "mailto:r.m.miranda.cs@gmail.com?subject=Inquiry&body=Message",
+    href: "mailto:r.m.miranda.ece@gmail.com?subject=Inquiry&body=Message",
   },
 ];
 

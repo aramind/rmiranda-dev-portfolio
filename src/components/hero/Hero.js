@@ -148,7 +148,7 @@ const Hero = () => {
         </Stack>
         <Link
           className=" hero-btn-link"
-          href="https://drive.google.com/file/d/1hS8Bvp5exjh9cPVTS1nl1iyAWvLj960s/view?usp=share_link"
+          href="https://drive.google.com/file/d/1nluC0u_0TcFMkQ-NTFOngQKRgS8uOzhr/view?usp=share_link"
           target="_blank"
         >
           <StyledButton variant="contained">View my Resume</StyledButton>

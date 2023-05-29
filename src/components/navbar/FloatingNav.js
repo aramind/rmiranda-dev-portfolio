@@ -26,7 +26,7 @@ const FloatingNav = () => {
       ariaLabel="Navigation"
       sx={{
         position: "fixed",
-        bottom: 24,
+        bottom: 72,
         right: 24,
       }}
       icon={<Navigation />}
